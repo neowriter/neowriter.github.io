@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Neo.</title>
+<link rel="icon" href="/portfolio/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/portfolio/favicon-32.png">
+<link rel="apple-touch-icon" href="/portfolio/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&display=swap">
+<style>
+/* One word, lower-left, drawn under once. Nothing else. */
+:root{
+  --paper:#F2EDE3; --ink:#16140F; --pen:#D13F24; 
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#16140F;--ink:#F2EDE3;--pen:#F0583B;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#16140F;--ink:#F2EDE3;--pen:#F0583B;color-scheme:dark}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink)}
+.stage{box-sizing:border-box;height:100%;min-height:360px;padding-block:clamp(24px,5vw,56px);padding-inline:clamp(20px,7vw,96px);display:grid;grid-template-rows:1fr;}
+.name{align-self:end;margin:0 0 clamp(40px,10vh,120px);font-family:var(--display);font-weight:800;font-size:clamp(96px,22vw,280px);line-height:.85;letter-spacing:-.045em;font-variation-settings:"opsz" 144}
+.word{position:relative;display:inline-block}
+.word svg{position:absolute;left:-2%;bottom:-.14em;width:104%;height:.2em;overflow:visible}
+.word path{fill:none;stroke:var(--pen);stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.2s cubic-bezier(.65,0,.35,1) .45s both}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){.word path{animation:none}}
+</style>
+
+</head>
+<body>
+<main class="stage">
+  <h1 class="name"><span class="word">Neo.<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 6.5 C 18 3, 40 4.5, 58 5 S 88 3.5, 98 5.5" stroke-width="5" vector-effect="non-scaling-stroke" style="stroke-width:clamp(5px,1.4vw,14px)"></path></svg></span></h1>
+</main>
+</body>
+</html>
